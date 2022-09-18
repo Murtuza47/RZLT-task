@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 7vh;
+  background: #A8A8A8;
+  color: #ffff;
+}
+
+.navLink {
+  list-style: none;
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 7px 0px;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.normal {
+  font-weight: 600;
+}
+
+.navLink li {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .navLink {
+    width: 40%;
+  }
+}
+
+@media (min-width: 481px) and (max-width:768px) {
+  .navLink {
+    width: 35%;
+  }
+}
