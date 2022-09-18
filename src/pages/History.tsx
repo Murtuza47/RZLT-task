@@ -6,7 +6,6 @@ export const HistoryPage = ({ searchHistory }: IHistoryPage) => {
   const historyItems = searchHistory.sort((x, y) => {
     return y.searchedAt - x.searchedAt;
   })
-  console.log(historyItems)
 
   const navigate = useNavigate()
 
