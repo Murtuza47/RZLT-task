@@ -28,10 +28,10 @@ export const SearchPage = ({
       onChangeInput(parsed.text as string)
       searchUser(searchText)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     return (() => {
       setIsSubmit(false)
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

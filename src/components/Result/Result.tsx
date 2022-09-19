@@ -1,4 +1,5 @@
 import { IResult } from "../../interface";
+import { Error } from "../Error";
 import { Spinner } from "../Spinner";
 import { User } from "../Users";
 import styles from "./Result.module.scss";
@@ -20,22 +21,22 @@ export const Result = ({
           <Spinner />
         </div>
       )
-        // : isError ? (
-        //   <Error />
-        // ) 
-        : data?.length > 0 ? (
-          <User
-            sortValue={sortValue}
-            changeSortValue={changeSortValue}
-            setPaginateNumer={setPaginateNumer}
-            pagination={pagination}
-            data={data}
-            currrentListNumber={currrentListNumber}
-          />
+        : isError ? (
+          <Error />
         )
-          : (
-            <h1>Oops! no data</h1>
-          )}
+          : data?.length > 0 ? (
+            <User
+              sortValue={sortValue}
+              changeSortValue={changeSortValue}
+              setPaginateNumer={setPaginateNumer}
+              pagination={pagination}
+              data={data}
+              currrentListNumber={currrentListNumber}
+            />
+          )
+            : (
+              <h1>Oops! no data</h1>
+            )}
     </div>
   </div >
 )
